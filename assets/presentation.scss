@@ -1,0 +1,65 @@
+@import "reveal-js/css/theme/template/mixins";
+@import "reveal-js/css/theme/template/settings";
+
+$mainFontSize: 2.5rem;
+$heading1Size: 5rem;
+$heading2Size: 4.5rem;
+$heading3Size: 3rem;
+$heading4Size: 2rem;
+
+$mainFont: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
+$mainColor: #000;
+$headingFont: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
+$headingColor: #383D3D;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #F0F1EB;
+$linkColor: #51483D;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: #26351C;
+
+$headingMargin: -$blockMargin 0 $blockMargin*2 0;
+
+.reveal a {
+  line-height: 1.3em;
+}
+
+#find-me {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.5rem;
+  column-gap: 2rem;
+
+  li {
+    margin-bottom: .5rem;
+    font-size: 1.3rem;
+    color: lighten($mainColor, 20%);
+  }
+}
+
+.columns {
+  display: flex;
+
+  > *:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+li {
+  list-style-type: '- ';
+  font-size: 2rem;
+
+  li {
+    font-size: 1.3rem;
+  }
+}
+
+.reveal .controls {
+  .navigate-right, .navigate-down {
+    &.highlight {
+      animation: none;
+    }
+  }
+}
+
+@import "reveal-js/css/theme/template/theme";
