@@ -17,3 +17,5 @@ isHTML = true
 [params.reveal_hugo]
 custom_theme = "presentation.scss"
 custom_theme_compile = true
+width = 1080
+height = 788

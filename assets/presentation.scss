@@ -40,8 +40,10 @@ $headingMargin: -$blockMargin 0 $blockMargin*2 0;
 .columns {
   display: flex;
 
-  > *:not(:last-child) {
-    margin-right: 2rem;
+
+  > * {
+    flex-grow: 1;
+    flex-basis: 50%;
   }
 }
 
