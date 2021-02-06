@@ -1,0 +1,34 @@
+
+
+<script>
+    let observerOpts = {
+        attributes: true
+    };
+
+    document.querySelectorAll('.typing').forEach(function(el) {
+        const typed = new Typed(el.querySelector('.typed'), {
+            stringsElement: el.querySelector('.typed-strings'),
+            loop: false,
+            startDelay: 3500,
+            typeSpeed: 40,
+            showCursor: false
+        });
+        typed.stop();
+
+        let observer = new MutationObserver((entries) => {
+            let target = entries[0].target;
+
+            if(target.classList.contains('present')) {
+                typed.start();
+            }
+
+            if(!target.classList.contains('present')) {
+                typed.reset();
+            }
+        });
+
+        observer.observe(el.parentNode, observerOpts);
+    });
+
+
+</script>

@@ -19,3 +19,4 @@ custom_theme = "presentation.scss"
 custom_theme_compile = true
 width = 1080
 height = 788
+plugins = ['js/typed.js']

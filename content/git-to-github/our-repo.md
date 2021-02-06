@@ -18,30 +18,62 @@ Switch to Github tab.
 
 ## Step 2: Initialize Local Repo
 
-[runnable cli command]
+{{% typed %}}
+git init
+{{% /typed %}}
+
+---
+
+### 2a: Tweaking Git's Default Branch Name
+
+![](/img/master.jpg)
+
+![](/img/main.jpg)
+
+---
+
+{{% typed %}}
+git config --global init.defaultBranch main
+{{% /typed %}}
 
 ---
 
 ## Step 3: Making Our First Commit
 
-? (This might require whole-screen sharing, not just window. Perhaps an in-browser local editor? Or maybe just a `touch` command?)
+{{% typed %}}
+^1000 git add .
+{{% /typed %}}
+
+{{% typed %}}
+^2500 git commit -m "First commit"
+{{% /typed %}}
 
 ---
 
 ## Step 4: Connecting Local & Remote
 
-[runnable cli command]
+{{% typed %}}
+git remote add origin [Github repo url]
+{{% /typed %}}
 
 ---
 
 ## Step 5: Push To Remote
 
-[runnable cli command, then show Github tab]
+{{% typed %}}
+git push -u origin main
+{{% /typed %}}
+
+{{% typed %}}
+^2500 git push
+{{% /typed %}}
 
 ---
 
 ## Step 6: Pulling Changes
 
-[make change in Github, then runnable cli command]
+{{% typed %}}
+git pull
+{{% /typed %}}
 
 {{% /section %}}

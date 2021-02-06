@@ -11,6 +11,14 @@ outputs = ["Reveal"]
 
 ## Merging Branches in Git...
 
+{{% typed %}}
+git checkout main
+{{% /typed %}}
+
+{{% typed %}}
+^1500 git merge feature
+{{% /typed %}}
+
 ---
 
 ## ...And With Github Pull Requests
