@@ -1,5 +1,5 @@
 +++
-title = "My presentation"
+title = "From Git to Github"
 outputs = ["Reveal"]
 mermaid = true
 typed = true
