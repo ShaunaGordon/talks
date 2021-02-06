@@ -1,5 +1,506 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><title>From Git to Github</title><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="black-translucent"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><link rel=stylesheet href=/reveal-js/css/reset.css><link rel=stylesheet href=/reveal-js/css/reveal.css><link rel=stylesheet href=/_.min.4cb71809ac7951858fec971b10f2aa13e09cddc25826510abc2eadd2cb020849.css id=theme><link rel=stylesheet href=/highlight-js/default.min.css><script data-goatcounter=https://gordondev.goatcounter.com/count async src=//gc.zgo.at/count.js></script><script async src=https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js></script></head><body><div class=reveal><div class=slides><section><h1 id=from-git-to-github>From Git To Github</h1><p>An Introduction to Version-Controlled and Collaborative Development</p></section><section><h2 id=hi-im-shauna>Hi, I&rsquo;m Shauna</h2><p><img src=../avatar.png style=max-height:200px;border:none;box-shadow:none></p><div id=find-me><div><p>Slack</p><ul><li>Code & Supply
-           <li>Write the Docs<li>WiA</ul></div><div><p>Elsewhere</p><ul><li><a href=mailto:shauna@shaunagordon.com>shauna@shaunagordon.com</a><li><a href=https://shaunagordon.com/>Blog: shaunagordon.com</a><li><a href=https://resume.shaunagordon.com/>Web Hub: resume.shaunagordon.com</a></ul></div></div></section><section><section data-shortcode-section><h2 id=assumptions>Assumptions:</h2><ul><li>At least somewhat technical</li><li>Have a Github account set up already</li><li>Have git installed locally</li></ul><aside class=notes><p>I can&rsquo;t go into installing git here, there are simply too many variables. However, tools like VSCode or Github Desktop will often install it for you, or provide a path to doing so.</p></aside></section><section><p>I&rsquo;ve created my Github account. Now what?</p><aside class=notes><p>Don&rsquo;t worry if you&rsquo;re not quite to this point yet. I have some additional resources at the end of this slide deck, which itself is available online. A recording of the talk itself will also be available to WiA members and VIP attendees.</p></aside></section></section><section><section data-shortcode-section><h2 id=git-vs-github>Git vs Github</h2><p>Wait&mldr;there&rsquo;s a difference?</p><p>(Yes, yes there is.)</p></section><section><h2 id=git>Git</h2><p>Version control system</p><p>Spiritual successor to Subversion</p><p>Manages file changes on any given system</p></section><section><h2 id=github>Github</h2><p>Value-add product</p><p>Centralized code hosting</p><p>Project management</p><aside class=notes><p>Github is to Git what Jupyter Notebooks is to Python</p></aside></section><section><p>[graphic]</p></section></section><section><section data-shortcode-section><h1 id=essentials-crash-course>Essentials Crash Course</h1></section><section><h2 id=git-commands>Git Commands</h2><div class="columns two"><div><ul><li>init<ul><li>creates a new repo</li></ul></li><li>clone<ul><li>copies an existing repo from elsewhere</li></ul></li><li>branch<ul><li>creates a working copy of local repo</li></ul></li><li>checkout<ul><li>switches to a branch from the local repo</li></ul></li><li>add<ul><li>adds new files to repo</li></ul></li></ul></div><div><ul><li>commit<ul><li>creates a &ldquo;log entry&rdquo; of the changes made</li></ul></li><li>push<ul><li>upload changes to a remote repo</li></ul></li><li>pull<ul><li>download changes from a remote repo</li></ul></li><li>merge<ul><li>combine changes from branches, forks, or commits</li></ul></li><li>remote<ul><li>access repos connected to this one</li></ul></li></ul></div></div></section><section><p>[chart of how git works, conceptually, with terms]</p></section><section><h2 id=gui-tools>GUI Tools</h2><ul><li>Gihub Desktop</li><li>VSCode</li></ul></section><section><h2 id=authentication-options>Authentication Options</h2><ul><li>Password<ul><li>&mldr;uses a password</li><li>Uses the <code>https://</code> protocol</li></ul></li><li>SSH<ul><li>Passwordless</li><li>Uses <code>ssh://</code> protocol</li></ul></li></ul></section></section><section><section data-shortcode-section><h1 id=creating--managing-our-own-repository>Creating & Managing Our Own Repository</h1></section><section><h2 id=step-1-create-in-github>Step 1: Create In Github</h2><aside class=notes><p>Switch to Github tab.</p></aside></section><section><h2 id=step-2-initialize-local-repo>Step 2: Initialize Local Repo</h2><div class=typing><div class=typed-strings><p>git init</p></div><span class=typed></span></div></section><section><h3 id=2a-tweaking-gits-default-branch-name>2a: Tweaking Git&rsquo;s Default Branch Name</h3><p><img src=/img/master.jpg alt></p><p><img src=/img/main.jpg alt></p></section><section><div class=typing><div class=typed-strings><p>git config &ndash;global init.defaultBranch main</p></div><span class=typed></span></div></section><section><h2 id=step-3-making-our-first-commit>Step 3: Making Our First Commit</h2><div class=typing><div class=typed-strings><p>^1000 git add .</p></div><span class=typed></span></div><div class=typing><div class=typed-strings><p>^2500 git commit -m &ldquo;First commit&rdquo;</p></div><span class=typed></span></div></section><section><h2 id=step-4-connecting-local--remote>Step 4: Connecting Local & Remote</h2><div class=typing><div class=typed-strings><p>git remote add origin [Github repo url]</p></div><span class=typed></span></div></section><section><h2 id=step-5-push-to-remote>Step 5: Push To Remote</h2><div class=typing><div class=typed-strings><p>git push -u origin main</p></div><span class=typed></span></div><div class=typing><div class=typed-strings><p>^2500 git push</p></div><span class=typed></span></div></section><section><h2 id=step-6-pulling-changes>Step 6: Pulling Changes</h2><div class=typing><div class=typed-strings><p>git pull</p></div><span class=typed></span></div></section></section><section><section data-shortcode-section><h1 id=working-with-others>Working With Others</h1></section><section><h2 id=forks-vs-branches>Forks vs Branches</h2><div class=columns><div><p>Branches</p><ul><li>Dependent on repo</li><li>Inextricably linked</li><li>Closely related to repo</li><li>Intended to be merged back into main branch (usually)</li></ul></div><div><p>Forks</p><ul><li>Based off a parent repo</li><li>Separate/independent</li><li>Not necessarily related after forking</li><li>Merging back to parent optional</li></ul></div></div><aside class=notes><p>See also: OpenOffice/LibreOffice</p></aside></section><section><h2 id=ownershipsource-of-truth-change>Ownership/Source Of Truth Change</h2><div class=columns><p>[personal; local -> remote]</p><p>[fork; local -> remote -> upstream]</p></div></section><section><h2 id=workflow-change>Workflow Change</h2><div class=columns><p>[branch workflow]</p><p>[fork workflow]</p></div></section></section><section><section data-shortcode-section><h1 id=merging-and-pull-requests>Merging And Pull Requests</h1></section><section><h2 id=merging-branches-in-git>Merging Branches in Git&mldr;</h2><div class=typing><div class=typed-strings><p>git checkout main</p></div><span class=typed></span></div><div class=typing><div class=typed-strings><p>^1500 git merge feature</p></div><span class=typed></span></div></section><section><h2 id=and-with-github-pull-requests>&mldr;And With Github Pull Requests</h2></section><section><h2 id=making-pull-requests>Making Pull Requests</h2></section><section><p>(A quick note on contribution guidelines)</p></section><section><h2 id=handling-incoming-pull-requests>Handling Incoming Pull Requests</h2></section><section><h2 id=merge-conflicts>Merge Conflicts</h2></section></section><section><section data-shortcode-section><h1 id=fin>Fin</h1><p>Questions?</p></section><section><h2 id=credits>Credits</h2><p>Slides in Hugo and RevealJS</p><ul><li>Hugo: <a href=https://gohugo.io/>https://gohugo.io/</a></li><li>RevealJS: <a href=https://revealjs.com/>https://revealjs.com/</a></li><li>Reveal-Hugo: <a href=https://reveal-hugo.dzello.com/>https://reveal-hugo.dzello.com/</a></li><li>Typing Effect: <a href=https://github.com/mattboldt/typed.js/>https://github.com/mattboldt/typed.js/</a></li></ul></section></section><section><section data-shortcode-section><h1 id=other-cool-stuff>Other Cool Stuff</h1><p>Other things Github can do, or that you can do with Github</p></section><section><h2 id=change-all-the-name-defaults>Change All The Name Defaults!</h2><p>Because inclusivity is cool, and microaggressions aren&rsquo;t</p><ul><li><a href=https://github.com/github/renaming>https://github.com/github/renaming</a></li></ul></section><section><h2 id=github-actions>Github Actions</h2><p>Workflow automation</p><ul><li>About: <a href=https://github.com/features/actions>https://github.com/features/actions</a></li><li>Docs: <a href=https://docs.github.com/en/actions>https://docs.github.com/en/actions</a></li><li>Official Library: <a href=https://github.com/actions>https://github.com/actions</a></li></ul></section><section><h2 id=github-organizations>Github Organizations</h2><p>For organizations or even just organizing related projects</p><ul><li>Announcement Article (dated, but good overview): <a href=https://github.blog/2010-06-29-introducing-organizations/>https://github.blog/2010-06-29-introducing-organizations/</a></li><li>Open Source Orgs to check out: <a href=https://github.com/collections/open-source-organizations>https://github.com/collections/open-source-organizations</a></li></ul></section><section><h2 id=github-pages>Github Pages</h2><p>Static site hosting to promote your projects or host your blog</p><ul><li><a href=https://pages.github.com/>https://pages.github.com/</a></li></ul></section><section><h2 id=github-learning-lab>Github Learning Lab</h2><p>Learn Github (and other things) with Github</p><ul><li><a href=https://lab.github.com/>https://lab.github.com/</a></li></ul></section><section><h2 id=github-education>Github Education</h2><p>Github for schools and resources for teachers</p><ul><li>About: <a href=https://education.github.com/>https://education.github.com/</a></li></ul></section><section><h2 id=hacktoberfest>Hacktoberfest</h2><p>Digital Ocean&rsquo;s annual event to encourage open source contributions</p><ul><li><a href=https://hacktoberfest.digitalocean.com/>https://hacktoberfest.digitalocean.com/</a></li></ul></section></section></div></div><script type=text/javascript src=/reveal-hugo/object-assign.js></script><a href=/reveal-js/css/print/ id=print-location style=display:none></a><script type=text/javascript>var printLocationElement=document.getElementById('print-location');var link=document.createElement('link');link.rel='stylesheet';link.type='text/css';link.href=printLocationElement.href+(window.location.search.match(/print-pdf/gi)?'pdf.css':'paper.css');document.getElementsByTagName('head')[0].appendChild(link);</script><script type=application/json id=reveal-hugo-site-params>{"custom_theme":"presentation.scss","custom_theme_compile":true,"height":788,"plugins":["js/typed.js"],"width":1080}</script><script type=application/json id=reveal-hugo-page-params>null</script><script src=/reveal-js/js/reveal.js></script><script type=text/javascript>function camelize(map){if(map){Object.keys(map).forEach(function(k){newK=k.replace(/(\_\w)/g,function(m){return m[1].toUpperCase()});if(newK!=k){map[newK]=map[k];delete map[k];}});}
-return map;}
-var revealHugoDefaults={center:true,controls:true,history:true,progress:true,transition:"slide"};var revealHugoSiteParams=JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);var revealHugoPageParams=JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);var options=Object.assign({},camelize(revealHugoDefaults),camelize(revealHugoSiteParams),camelize(revealHugoPageParams));Reveal.initialize(options);</script><script type=text/javascript src=/reveal-js/plugin/markdown/marked.js></script><script type=text/javascript src=/reveal-js/plugin/markdown/markdown.js></script><script type=text/javascript src=/reveal-js/plugin/highlight/highlight.js></script><script type=text/javascript src=/reveal-js/plugin/zoom-js/zoom.js></script><script type=text/javascript src=/reveal-js/plugin/notes/notes.js></script><script type=text/javascript src=/js/typed.js></script><script>let observerOpts={attributes:true};document.querySelectorAll('.typing').forEach(function(el){const typed=new Typed(el.querySelector('.typed'),{stringsElement:el.querySelector('.typed-strings'),loop:false,startDelay:3500,typeSpeed:40,showCursor:false});typed.stop();let observer=new MutationObserver((entries)=>{let target=entries[0].target;if(target.classList.contains('present')){typed.start();}
-if(!target.classList.contains('present')){typed.reset();}});observer.observe(el.parentNode,observerOpts);});</script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>From Git to Github</title>
+
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/reveal-js/css/reset.css">
+<link rel="stylesheet" href="/reveal-js/css/reveal.css">
+  <link rel="stylesheet" href="/_.min.4cb71809ac7951858fec971b10f2aa13e09cddc25826510abc2eadd2cb020849.css" id="theme"><link rel="stylesheet" href="/highlight-js/default.min.css">
+    <script data-goatcounter="https://gordondev.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+
+
+<script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
+
+
+
+
+
+
+  </head>
+  <body>
+    
+    <div class="reveal">
+      <div class="slides">
+  
+
+
+  
+
+    <section><h1 id="from-git-to-github">From Git To Github</h1>
+<p>An Introduction to Version-Controlled and Collaborative Development</p>
+</section><section>
+<h2 id="hi-im-shauna">Hi, I&rsquo;m Shauna</h2>
+<p><img src="../avatar.png" style="max-height:200px;border:none;box-shadow:none" /></p>
+<div id="find-me">
+    <div>
+        <p>Slack</p>
+        <ul>
+            <li> Code & Supply
+            <li> Write the Docs
+            <li> WiA
+        </ul>
+    </div>
+    <div>
+        <p>Elsewhere</p>
+        <ul>
+            <li> <a href="mailto:shauna@shaunagordon.com">shauna@shaunagordon.com</a>
+            <li> <a href="https://shaunagordon.com/">Blog: shaunagordon.com</a>
+            <li> <a href="https://resume.shaunagordon.com/">Web Hub: resume.shaunagordon.com</a>
+        </ul>
+    </div>
+</div>
+</section>
+    <section>
+
+<section data-shortcode-section>
+<h2 id="assumptions">Assumptions:</h2>
+<ul>
+<li>At least somewhat technical</li>
+<li>Have a Github account set up already</li>
+<li>Have git installed locally</li>
+</ul>
+<aside class="notes"><p>I can&rsquo;t go into installing git here, there are simply too many variables. However, tools like VSCode or Github Desktop will often install it for you, or provide a path to doing so.</p>
+</aside>
+</section><section>
+<p>I&rsquo;ve created my Github account. Now what?</p>
+<aside class="notes"><p>Don&rsquo;t worry if you&rsquo;re not quite to this point yet. I have some additional resources at the end of this slide deck, which itself is available online. A recording of the talk itself will also be available to WiA members and VIP attendees.</p>
+</aside>
+
+</section>
+</section>
+    <section>
+
+<section data-shortcode-section>
+<h2 id="git-vs-github">Git vs Github</h2>
+<p>Wait&hellip;there&rsquo;s a difference?</p>
+<p>(Yes, yes there is.)</p>
+</section><section>
+<h2 id="git">Git</h2>
+<p>Version control system</p>
+<p>Spiritual successor to Subversion</p>
+<p>Manages file changes on any given system</p>
+</section><section>
+<h2 id="github">Github</h2>
+<p>Value-add product</p>
+<p>Centralized code hosting</p>
+<p>Project management</p>
+<aside class="notes"><p>Github is to Git what Jupyter Notebooks is to Python</p>
+</aside>
+</section><section>
+<p>[graphic]</p>
+
+</section>
+</section>
+    <section>
+
+<section data-shortcode-section>
+<h1 id="essentials-crash-course">Essentials Crash Course</h1>
+</section><section>
+<h2 id="git-commands">Git Commands</h2>
+<div class='columns two'>
+<div>
+<ul>
+<li>init
+<ul>
+<li>creates a new repo</li>
+</ul>
+</li>
+<li>clone
+<ul>
+<li>copies an existing repo from elsewhere</li>
+</ul>
+</li>
+<li>branch
+<ul>
+<li>creates a working copy of local repo</li>
+</ul>
+</li>
+<li>checkout
+<ul>
+<li>switches to a branch from the local repo</li>
+</ul>
+</li>
+<li>add
+<ul>
+<li>adds new files to repo</li>
+</ul>
+</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>commit
+<ul>
+<li>creates a &ldquo;log entry&rdquo; of the changes made</li>
+</ul>
+</li>
+<li>push
+<ul>
+<li>upload changes to a remote repo</li>
+</ul>
+</li>
+<li>pull
+<ul>
+<li>download changes from a remote repo</li>
+</ul>
+</li>
+<li>merge
+<ul>
+<li>combine changes from branches, forks, or commits</li>
+</ul>
+</li>
+<li>remote
+<ul>
+<li>access repos connected to this one</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</section><section>
+<p>[chart of how git works, conceptually, with terms]</p>
+</section><section>
+<h2 id="gui-tools">GUI Tools</h2>
+<ul>
+<li>Gihub Desktop</li>
+<li>VSCode</li>
+</ul>
+</section><section>
+<h2 id="authentication-options">Authentication Options</h2>
+<ul>
+<li>Password
+<ul>
+<li>&hellip;uses a password</li>
+<li>Uses the <code>https://</code> protocol</li>
+</ul>
+</li>
+<li>SSH
+<ul>
+<li>Passwordless</li>
+<li>Uses <code>ssh://</code> protocol</li>
+</ul>
+</li>
+</ul>
+
+</section>
+</section>
+    <section>
+
+<section data-shortcode-section>
+<h1 id="creating--managing-our-own-repository">Creating &amp; Managing Our Own Repository</h1>
+</section><section>
+<h2 id="step-1-create-in-github">Step 1: Create In Github</h2>
+<aside class="notes"><p>Switch to Github tab.</p>
+</aside>
+</section><section>
+<h2 id="step-2-initialize-local-repo">Step 2: Initialize Local Repo</h2>
+<div class="typing">
+    <div class="typed-strings"><p>git init</p>
+</div>
+    <span class="typed"></span>
+</div>
+</section><section>
+<h3 id="2a-tweaking-gits-default-branch-name">2a: Tweaking Git&rsquo;s Default Branch Name</h3>
+<p><img src="/img/master.jpg" alt=""></p>
+<p><img src="/img/main.jpg" alt=""></p>
+</section><section>
+<div class="typing">
+    <div class="typed-strings"><p>git config &ndash;global init.defaultBranch main</p>
+</div>
+    <span class="typed"></span>
+</div>
+</section><section>
+<h2 id="step-3-making-our-first-commit">Step 3: Making Our First Commit</h2>
+<div class="typing">
+    <div class="typed-strings"><p>^1000 git add .</p>
+</div>
+    <span class="typed"></span>
+</div>
+<div class="typing">
+    <div class="typed-strings"><p>^2500 git commit -m &ldquo;First commit&rdquo;</p>
+</div>
+    <span class="typed"></span>
+</div>
+</section><section>
+<h2 id="step-4-connecting-local--remote">Step 4: Connecting Local &amp; Remote</h2>
+<div class="typing">
+    <div class="typed-strings"><p>git remote add origin [Github repo url]</p>
+</div>
+    <span class="typed"></span>
+</div>
+</section><section>
+<h2 id="step-5-push-to-remote">Step 5: Push To Remote</h2>
+<div class="typing">
+    <div class="typed-strings"><p>git push -u origin main</p>
+</div>
+    <span class="typed"></span>
+</div>
+<div class="typing">
+    <div class="typed-strings"><p>^2500 git push</p>
+</div>
+    <span class="typed"></span>
+</div>
+</section><section>
+<h2 id="step-6-pulling-changes">Step 6: Pulling Changes</h2>
+<div class="typing">
+    <div class="typed-strings"><p>git pull</p>
+</div>
+    <span class="typed"></span>
+</div>
+
+</section>
+</section>
+    <section>
+
+<section data-shortcode-section>
+<h1 id="working-with-others">Working With Others</h1>
+</section><section>
+<h2 id="forks-vs-branches">Forks vs Branches</h2>
+<div class='columns '>
+<div>
+<p>Branches</p>
+<ul>
+<li>Dependent on repo</li>
+<li>Inextricably linked</li>
+<li>Closely related to repo</li>
+<li>Intended to be merged back into main branch (usually)</li>
+</ul>
+</div>
+<div>
+<p>Forks</p>
+<ul>
+<li>Based off a parent repo</li>
+<li>Separate/independent</li>
+<li>Not necessarily related after forking</li>
+<li>Merging back to parent optional</li>
+</ul>
+</div>
+</div>
+<aside class="notes"><p>See also: OpenOffice/LibreOffice</p>
+</aside>
+</section><section>
+<h2 id="ownershipsource-of-truth-change">Ownership/Source Of Truth Change</h2>
+<div class='columns '>
+<p>[personal; local -&gt; remote]</p>
+<p>[fork; local -&gt; remote -&gt; upstream]</p>
+</div>
+</section><section>
+<h2 id="workflow-change">Workflow Change</h2>
+<div class='columns '>
+<p>[branch workflow]</p>
+<p>[fork workflow]</p>
+</div>
+
+</section>
+</section>
+    <section>
+
+<section data-shortcode-section>
+<h1 id="merging-and-pull-requests">Merging And Pull Requests</h1>
+</section><section>
+<h2 id="merging-branches-in-git">Merging Branches in Git&hellip;</h2>
+<div class="typing">
+    <div class="typed-strings"><p>git checkout main</p>
+</div>
+    <span class="typed"></span>
+</div>
+<div class="typing">
+    <div class="typed-strings"><p>^1500 git merge feature</p>
+</div>
+    <span class="typed"></span>
+</div>
+</section><section>
+<h2 id="and-with-github-pull-requests">&hellip;And With Github Pull Requests</h2>
+</section><section>
+<h2 id="making-pull-requests">Making Pull Requests</h2>
+</section><section>
+<p>(A quick note on contribution guidelines)</p>
+</section><section>
+<h2 id="handling-incoming-pull-requests">Handling Incoming Pull Requests</h2>
+</section><section>
+<h2 id="merge-conflicts">Merge Conflicts</h2>
+
+</section>
+</section>
+    <section>
+
+<section data-shortcode-section>
+<h1 id="fin">Fin</h1>
+<p>Questions?</p>
+</section><section>
+<h2 id="credits">Credits</h2>
+<p>Slides in Hugo and RevealJS</p>
+<ul>
+<li>Hugo: <a href="https://gohugo.io/">https://gohugo.io/</a></li>
+<li>RevealJS: <a href="https://revealjs.com/">https://revealjs.com/</a></li>
+<li>Reveal-Hugo: <a href="https://reveal-hugo.dzello.com/">https://reveal-hugo.dzello.com/</a></li>
+<li>Typing Effect: <a href="https://github.com/mattboldt/typed.js/">https://github.com/mattboldt/typed.js/</a></li>
+</ul>
+
+</section>
+</section>
+    <section>
+
+<section data-shortcode-section>
+<h1 id="other-cool-stuff">Other Cool Stuff</h1>
+<p>Other things Github can do, or that you can do with Github</p>
+</section><section>
+<h2 id="change-all-the-name-defaults">Change All The Name Defaults!</h2>
+<p>Because inclusivity is cool, and microaggressions aren&rsquo;t</p>
+<ul>
+<li><a href="https://github.com/github/renaming">https://github.com/github/renaming</a></li>
+</ul>
+</section><section>
+<h2 id="github-actions">Github Actions</h2>
+<p>Workflow automation</p>
+<ul>
+<li>About: <a href="https://github.com/features/actions">https://github.com/features/actions</a></li>
+<li>Docs: <a href="https://docs.github.com/en/actions">https://docs.github.com/en/actions</a></li>
+<li>Official Library: <a href="https://github.com/actions">https://github.com/actions</a></li>
+</ul>
+</section><section>
+<h2 id="github-organizations">Github Organizations</h2>
+<p>For organizations or even just organizing related projects</p>
+<ul>
+<li>Announcement Article (dated, but good overview): <a href="https://github.blog/2010-06-29-introducing-organizations/">https://github.blog/2010-06-29-introducing-organizations/</a></li>
+<li>Open Source Orgs to check out: <a href="https://github.com/collections/open-source-organizations">https://github.com/collections/open-source-organizations</a></li>
+</ul>
+</section><section>
+<h2 id="github-pages">Github Pages</h2>
+<p>Static site hosting to promote your projects or host your blog</p>
+<ul>
+<li><a href="https://pages.github.com/">https://pages.github.com/</a></li>
+</ul>
+</section><section>
+<h2 id="github-learning-lab">Github Learning Lab</h2>
+<p>Learn Github (and other things) with Github</p>
+<ul>
+<li><a href="https://lab.github.com/">https://lab.github.com/</a></li>
+</ul>
+</section><section>
+<h2 id="github-education">Github Education</h2>
+<p>Github for schools and resources for teachers</p>
+<ul>
+<li>About: <a href="https://education.github.com/">https://education.github.com/</a></li>
+</ul>
+</section><section>
+<h2 id="hacktoberfest">Hacktoberfest</h2>
+<p>Digital Ocean&rsquo;s annual event to encourage open source contributions</p>
+<ul>
+<li><a href="https://hacktoberfest.digitalocean.com/">https://hacktoberfest.digitalocean.com/</a></li>
+</ul>
+
+</section>
+</section>
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/reveal-hugo/object-assign.js></script>
+
+<a href="/reveal-js/css/print/" id="print-location" style="display: none;"></a>
+<script type="text/javascript">
+  var printLocationElement = document.getElementById('print-location');
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = printLocationElement.href + (window.location.search.match(/print-pdf/gi) ? 'pdf.css' : 'paper.css');
+  document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script type="application/json" id="reveal-hugo-site-params">{"custom_theme":"presentation.scss","custom_theme_compile":true,"height":788,"plugins":["js/typed.js"],"width":1080}</script>
+<script type="application/json" id="reveal-hugo-page-params">null</script>
+
+<script src="/reveal-js/js/reveal.js"></script>
+
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+  
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams));
+  Reveal.initialize(options);
+</script>
+
+
+  
+  
+  <script type="text/javascript" src="/reveal-js/plugin/markdown/marked.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/zoom-js/zoom.js"></script>
+  
+  
+  <script type="text/javascript" src="/reveal-js/plugin/notes/notes.js"></script>
+
+
+
+<script type="text/javascript" src="/js/typed.js"></script>
+
+    
+
+<script>
+    let observerOpts = {
+        attributes: true
+    };
+
+    document.querySelectorAll('.typing').forEach(function(el) {
+        const typed = new Typed(el.querySelector('.typed'), {
+            stringsElement: el.querySelector('.typed-strings'),
+            loop: false,
+            startDelay: 3500,
+            typeSpeed: 40,
+            showCursor: false
+        });
+        typed.stop();
+
+        let observer = new MutationObserver((entries) => {
+            let target = entries[0].target;
+
+            if(target.classList.contains('present')) {
+                typed.start();
+            }
+
+            if(!target.classList.contains('present')) {
+                typed.reset();
+            }
+        });
+
+        observer.observe(el.parentNode, observerOpts);
+    });
+
+
+</script>
+
+    
+  </body>
+</html>
