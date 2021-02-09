@@ -48,9 +48,13 @@ See also: OpenOffice/LibreOffice
 ## Workflow Change
 
 {{% columns %}}
-[branch workflow]
+Branch:
+![](/img/git-flow.png)
 
-[fork workflow]
+Fork:
+![](/img/git-flow-forks.png)
 {{% /columns %}}
+
+<span class="credit">Image source: https://training.github.com</span>
 
 {{% /section %}}

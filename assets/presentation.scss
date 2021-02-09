@@ -20,20 +20,26 @@ $selectionBackgroundColor: #26351C;
 
 $headingMargin: -$blockMargin 0 $blockMargin*2 0;
 
-.reveal a {
-  line-height: 1.3em;
+.reveal {
+  a {
+    line-height: 1.3em;
+  }
+
+  .controls {
+    .navigate-right, .navigate-down {
+      &.highlight {
+        animation: none;
+      }
+    }
+  }
 }
 
-#find-me {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  font-size: 1.5rem;
-  column-gap: 2rem;
+li {
+  list-style-type: '- ';
+  font-size: 2rem;
 
   li {
-    margin-bottom: .5rem;
     font-size: 1.3rem;
-    color: lighten($mainColor, 20%);
   }
 }
 
@@ -47,20 +53,20 @@ $headingMargin: -$blockMargin 0 $blockMargin*2 0;
   }
 }
 
-li {
-  list-style-type: '- ';
-  font-size: 2rem;
-
-  li {
-    font-size: 1.3rem;
-  }
+.credit {
+  font-size: .75rem;
 }
 
-.reveal .controls {
-  .navigate-right, .navigate-down {
-    &.highlight {
-      animation: none;
-    }
+#find-me {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.5rem;
+  column-gap: 2rem;
+
+  li {
+    margin-bottom: .5rem;
+    font-size: 1.3rem;
+    color: lighten($mainColor, 20%);
   }
 }
 

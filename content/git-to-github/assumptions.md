@@ -6,12 +6,14 @@ outputs = ["Reveal"]
 {{% section %}}
 ## Assumptions:
 
-- At least somewhat technical
-- Have a Github account set up already
-- Have git installed locally
+{{< fraglist >}}
+At least somewhat technical
+Have a Github account set up already
+Have git installed locally
+{{< /fraglist >}}
 
 {{% note %}}
-I can't go into installing git here, there are simply too many variables. However, tools like VSCode or Github Desktop will often install it for you, or provide a path to doing so.
+I can't go into installing git here, there are simply too many variables. However, tools like VSCode or Github Desktop will often install it for you, or provide a path to doing so. I'll also have resources at the end of this slide deck for more information.
 {{% /note %}}
 
 ---

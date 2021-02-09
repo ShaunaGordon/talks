@@ -68,4 +68,13 @@ Digital Ocean's annual event to encourage open source contributions
 - https://hacktoberfest.digitalocean.com/
 
 
+---
+
+## Help Info
+
+- Installing Git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+- Setting up SSH keys: https://www.freecodecamp.org/news/git-ssh-how-to/
+- Git cheatsheet: https://education.github.com/git-cheat-sheet-education.pdf
+- Github's git cheatsheet collection (multilingual): https://training.github.com/
+
 {{% /section %}}

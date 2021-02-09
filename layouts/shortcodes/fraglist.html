@@ -1,0 +1,9 @@
+{{ $items := split .Inner "\n" }}
+
+<ul>
+{{ range $item := $items }}
+    {{- if and (ne $item "") (ne (substr $item 0 1) "<") -}}
+        <li class="fragment">{{ $item | htmlUnescape | safeHTML }}</li>
+    {{- end -}}
+{{ end }}
+</ul>

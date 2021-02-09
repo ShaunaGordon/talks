@@ -15,6 +15,9 @@
         });
         typed.stop();
 
+        // TODO: Reveal 4 has events that can help with this
+        // use them instead, after Reveal-Hugo updates
+        // See: https://github.com/dzello/reveal-hugo/pull/91
         let observer = new MutationObserver((entries) => {
             let target = entries[0].target;
 

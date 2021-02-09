@@ -49,18 +49,28 @@ outputs = ["Reveal"]
 
 ## GUI Tools
 
-- Gihub Desktop
-- VSCode
+{{< fraglist >}}
+Github Desktop
+VSCode
+{{< /fraglist >}}
 
 ---
 
 ## Authentication Options
 
-- Password
-    - ...uses a password
-    - Uses the `https://` protocol
-- SSH
-    - Passwordless
-    - Uses `ssh://` protocol
+<ul>
+    <li class="fragment">Password
+        <ul>
+            <li class="fragment">...uses a password</li>
+            <li class="fragment">Uses the `https://` protocol</li>
+        </ul>
+    </li>
+    <li class="fragment">SSH
+        <ul>
+            <li class="fragment">Passwordless
+            <li class="fragment">Uses `ssh://` protocol
+        </ul>
+    </li>
+</ul>
 
 {{% /section %}}
