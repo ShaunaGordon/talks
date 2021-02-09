@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/reveal-js/css/reset.css">
 <link rel="stylesheet" href="/reveal-js/css/reveal.css">
-  <link rel="stylesheet" href="/_.min.4cb71809ac7951858fec971b10f2aa13e09cddc25826510abc2eadd2cb020849.css" id="theme"><link rel="stylesheet" href="/highlight-js/default.min.css">
+  <link rel="stylesheet" href="/_.min.4569569bec84393931edd77a05d6d7fec8d5e1f3b286253f448baeeb74d0b376.css" id="theme"><link rel="stylesheet" href="/highlight-js/default.min.css">
     <script data-goatcounter="https://gordondev.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
@@ -62,11 +62,9 @@
 <section data-shortcode-section>
 <h2 id="assumptions">Assumptions:</h2>
 <ul>
-<li>At least somewhat technical</li>
-<li>Have a Github account set up already</li>
-<li>Have git installed locally</li>
+<li class="fragment">At least somewhat technical</li><li class="fragment">Have a Github account set up already</li><li class="fragment">Have git installed locally</li>
 </ul>
-<aside class="notes"><p>I can&rsquo;t go into installing git here, there are simply too many variables. However, tools like VSCode or Github Desktop will often install it for you, or provide a path to doing so.</p>
+<aside class="notes"><p>I can&rsquo;t go into installing git here, there are simply too many variables. However, tools like VSCode or Github Desktop will often install it for you, or provide a path to doing so. I&rsquo;ll also have resources at the end of this slide deck for more information.</p>
 </aside>
 </section><section>
 <p>I&rsquo;ve created my Github account. Now what?</p>
@@ -79,18 +77,24 @@
 
 <section data-shortcode-section>
 <h2 id="git-vs-github">Git vs Github</h2>
-<p>Wait&hellip;there&rsquo;s a difference?</p>
-<p>(Yes, yes there is.)</p>
+<p><span class='fragment ' >Wait&hellip;there&rsquo;s a difference?</span></p>
+<p><span class='fragment ' >(Yes, yes there is.)</span></p>
 </section><section>
-<h2 id="git">Git</h2>
-<p>Version control system</p>
-<p>Spiritual successor to Subversion</p>
-<p>Manages file changes on any given system</p>
-</section><section>
-<h2 id="github">Github</h2>
-<p>Value-add product</p>
-<p>Centralized code hosting</p>
-<p>Project management</p>
+<h2 id="git-vs-github-1">Git vs Github</h2>
+<div class='columns '>
+<div>
+<p>Git</p>
+<ul>
+<li class="fragment">Version control system</li><li class="fragment">Spiritual successor to Subversion</li><li class="fragment">Manages file changes on any given system</li>
+</ul>
+</div>
+<div>
+<p>Github</p>
+<ul>
+<li class="fragment">Value-add product</li><li class="fragment">Centralized code hosting</li><li class="fragment">Project management</li>
+</ul>
+</div>
+</div>
 <aside class="notes"><p>Github is to Git what Jupyter Notebooks is to Python</p>
 </aside>
 </section><section>
@@ -169,24 +173,23 @@
 </section><section>
 <h2 id="gui-tools">GUI Tools</h2>
 <ul>
-<li>Gihub Desktop</li>
-<li>VSCode</li>
+<li class="fragment">Github Desktop</li><li class="fragment">VSCode</li>
 </ul>
 </section><section>
 <h2 id="authentication-options">Authentication Options</h2>
 <ul>
-<li>Password
-<ul>
-<li>&hellip;uses a password</li>
-<li>Uses the <code>https://</code> protocol</li>
-</ul>
-</li>
-<li>SSH
-<ul>
-<li>Passwordless</li>
-<li>Uses <code>ssh://</code> protocol</li>
-</ul>
-</li>
+    <li class="fragment">Password
+        <ul>
+            <li class="fragment">...uses a password</li>
+            <li class="fragment">Uses the `https://` protocol</li>
+        </ul>
+    </li>
+    <li class="fragment">SSH
+        <ul>
+            <li class="fragment">Passwordless
+            <li class="fragment">Uses `ssh://` protocol
+        </ul>
+    </li>
 </ul>
 
 </section>
@@ -294,9 +297,12 @@
 </section><section>
 <h2 id="workflow-change">Workflow Change</h2>
 <div class='columns '>
-<p>[branch workflow]</p>
-<p>[fork workflow]</p>
+<p>Branch:
+<img src="/img/git-flow.png" alt=""></p>
+<p>Fork:
+<img src="/img/git-flow-forks.png" alt=""></p>
 </div>
+<p><span class="credit">Image source: <a href="https://training.github.com">https://training.github.com</a></span></p>
 
 </section>
 </section>
@@ -396,6 +402,14 @@
 <ul>
 <li><a href="https://hacktoberfest.digitalocean.com/">https://hacktoberfest.digitalocean.com/</a></li>
 </ul>
+</section><section>
+<h2 id="help-info">Help Info</h2>
+<ul>
+<li>Installing Git: <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a></li>
+<li>Setting up SSH keys: <a href="https://www.freecodecamp.org/news/git-ssh-how-to/">https://www.freecodecamp.org/news/git-ssh-how-to/</a></li>
+<li>Git cheatsheet: <a href="https://education.github.com/git-cheat-sheet-education.pdf">https://education.github.com/git-cheat-sheet-education.pdf</a></li>
+<li>Github&rsquo;s git cheatsheet collection (multilingual): <a href="https://training.github.com/">https://training.github.com/</a></li>
+</ul>
 
 </section>
 </section>
@@ -483,6 +497,9 @@
         });
         typed.stop();
 
+        
+        
+        
         let observer = new MutationObserver((entries) => {
             let target = entries[0].target;
 
