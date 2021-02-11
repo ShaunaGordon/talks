@@ -17,5 +17,7 @@ Slides in Hugo and RevealJS
 - Reveal-Hugo: https://reveal-hugo.dzello.com/
 - Typing Effect: https://github.com/mattboldt/typed.js/
 - Flowcharts: https://mermaid-js.github.io
+- Deck Source: https://github.com/ShaunaGordon/talks
+- Hosted By: https://www.netlify.com/
 
 {{% /section %}}
