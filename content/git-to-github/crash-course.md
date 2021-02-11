@@ -5,11 +5,11 @@ outputs = ["Reveal"]
 
 {{% section %}}
 
-# Essentials Crash Course
+# Git Essentials Crash Course
 
 ---
 
-## Git Commands
+## Basic Git Commands
 
 {{% columns class="two" %}}
 {{% column %}}
@@ -45,6 +45,8 @@ outputs = ["Reveal"]
 {{% /columns %}}
 
 ---
+
+## Git Workflows
 
 <div class="mermaid fragment">
 graph LR
