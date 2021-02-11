@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/reveal-js/css/reset.css">
 <link rel="stylesheet" href="/reveal-js/css/reveal.css">
-  <link rel="stylesheet" href="/_.min.4569569bec84393931edd77a05d6d7fec8d5e1f3b286253f448baeeb74d0b376.css" id="theme"><link rel="stylesheet" href="/highlight-js/default.min.css">
+  <link rel="stylesheet" href="/_.min.2dc9f1f6b05d5f2e275cf0bec88853b0e16aaf81335cc5f36710ada85978643e.css" id="theme"><link rel="stylesheet" href="/highlight-js/default.min.css">
     <script data-goatcounter="https://gordondev.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
@@ -33,7 +33,10 @@
 
   
 
-    <section><h1 id="from-git-to-github">From Git To Github</h1>
+    <section>
+
+<section data-shortcode-section>
+<h1 id="from-git-to-github">From Git To Github</h1>
 <p>An Introduction to Version-Controlled and Collaborative Development</p>
 </section><section>
 <h2 id="hi-im-shauna">Hi, I&rsquo;m Shauna</h2>
@@ -42,20 +45,30 @@
     <div>
         <p>Slack</p>
         <ul>
-            <li> Code & Supply
-            <li> Write the Docs
-            <li> WiA
+            <li> Code & Supply</li>
+            <li> Write the Docs</li>
+            <li> WiA</li>
+            <li> TechLife Columbus</li>
         </ul>
     </div>
     <div>
         <p>Elsewhere</p>
         <ul>
-            <li> <a href="mailto:shauna@shaunagordon.com">shauna@shaunagordon.com</a>
-            <li> <a href="https://shaunagordon.com/">Blog: shaunagordon.com</a>
-            <li> <a href="https://resume.shaunagordon.com/">Web Hub: resume.shaunagordon.com</a>
+            <li> <a href="mailto:shauna@shaunagordon.com">Email: shauna@shaunagordon.com</a></li>
+            <li> <a href="https://shaunagordon.com/">Blog: shaunagordon.com</a></li>
+            <li> <a href="https://resume.shaunagordon.com/">Web Hub: resume.shaunagordon.com</a></li>
+            <li> <a href="https://talks.shaunagordon.com/">Talk Slide Decks: talks.shaunagordon.com</a></li>
         </ul>
     </div>
 </div>
+<aside class="notes"><p>Hi!</p>
+<p>I&rsquo;ve been a software engineer for over a decade, and struck out on my own as an independent consultant about two years ago. I do full stack web application development, particularly for startups and small businesses, particularly in the education tech and e-commerce industries.</p>
+<p>(Full disclosure - I&rsquo;m rather tangential to analytics, so I am approaching this from that angle, and some of the tech-specific things might need adapted to your own use-cases, but there should be plenty of cross-over for that to not be an issue.)</p>
+<p>You can find me in the WiA Slack group, as well as Write the Docs, Code &amp; Supply, and the Tech Life Columbus, among a few other more niche ones.</p>
+<p>You can also reach me and get my information via my website and email. My resume site serves as a sort of hub for my online presence in general.</p>
+</aside>
+
+</section>
 </section>
     <section>
 
@@ -64,11 +77,12 @@
 <ul>
 <li class="fragment">At least somewhat technical</li><li class="fragment">Have a Github account set up already</li><li class="fragment">Have git installed locally</li>
 </ul>
-<aside class="notes"><p>I can&rsquo;t go into installing git here, there are simply too many variables. However, tools like VSCode or Github Desktop will often install it for you, or provide a path to doing so. I&rsquo;ll also have resources at the end of this slide deck for more information.</p>
+<aside class="notes"><p>Before we dive in, I want to go over a few preliminary assumptions for this tutorial. We have a lot of ground to cover in a fairly short block of time, so this does assume you have a base level of technical skill (shouldn&rsquo;t be an issue here), a Github account already created, and git installed on your machine.</p>
+<p>I can&rsquo;t really go into installing git here, the process is simply a bit too system-dependent. However, tools like VSCode or Github Desktop will often install it for you, or provide a path to doing so, and Mac and some Linux distros often have some version installed by default already.</p>
 </aside>
 </section><section>
 <p>I&rsquo;ve created my Github account. Now what?</p>
-<aside class="notes"><p>Don&rsquo;t worry if you&rsquo;re not quite to this point yet. I have some additional resources at the end of this slide deck, which itself is available online. A recording of the talk itself will also be available to WiA members and VIP attendees.</p>
+<aside class="notes"><p>Don&rsquo;t worry if you&rsquo;re not quite to this point yet. I have some additional resources at the end of this slide deck, which itself is available online at talks.shaunagordon.com. A recording of the talk itself will also be available to WiA members and VIP attendees.</p>
 </aside>
 
 </section>
@@ -98,7 +112,11 @@
 <aside class="notes"><p>Github is to Git what Jupyter Notebooks is to Python</p>
 </aside>
 </section><section>
-<p>[graphic]</p>
+<div class="mermaid">
+graph LR
+    A[Source Code]-->B[Git]
+    B-->C[Github]
+</div>
 
 </section>
 </section>
@@ -110,70 +128,62 @@
 <h2 id="git-commands">Git Commands</h2>
 <div class='columns two'>
 <div>
-<ul>
-<li>init
-<ul>
-<li>creates a new repo</li>
-</ul>
-</li>
-<li>clone
-<ul>
-<li>copies an existing repo from elsewhere</li>
-</ul>
-</li>
-<li>branch
-<ul>
-<li>creates a working copy of local repo</li>
-</ul>
-</li>
-<li>checkout
-<ul>
-<li>switches to a branch from the local repo</li>
-</ul>
-</li>
-<li>add
-<ul>
-<li>adds new files to repo</li>
-</ul>
-</li>
-</ul>
+<dl>
+    <dt class="fragment">init</dt>
+        <dd class="fragment">creates a new repo</dd>
+    <dt class="fragment">clone</dt>
+        <dd class="fragment">copies an existing repo from elsewhere</dd>
+    <dt class="fragment">branch</dt>
+        <dd class="fragment">creates a working copy of local repo</dd>
+    <dt class="fragment">checkout</dt>
+        <dd class="fragment">switches to a branch from the local repo</dd>
+    <dt class="fragment">add</dt>
+        <dd class="fragment">adds changes to "staging area" for commit review</dd>
+</dl>
 </div>
 <div>
-<ul>
-<li>commit
-<ul>
-<li>creates a &ldquo;log entry&rdquo; of the changes made</li>
-</ul>
-</li>
-<li>push
-<ul>
-<li>upload changes to a remote repo</li>
-</ul>
-</li>
-<li>pull
-<ul>
-<li>download changes from a remote repo</li>
-</ul>
-</li>
-<li>merge
-<ul>
-<li>combine changes from branches, forks, or commits</li>
-</ul>
-</li>
-<li>remote
-<ul>
-<li>access repos connected to this one</li>
-</ul>
-</li>
-</ul>
+<dl>
+    <dt class="fragment">commit</dt>
+        <dd class="fragment">creates a "log entry" of the changes made</dd>
+    <dt class="fragment">push</dt>
+        <dd class="fragment">upload changes to a remote repo</dd>
+    <dt class="fragment">pull</dt>
+        <dd class="fragment">download changes from a remote repo</dd>
+    <dt class="fragment">merge</dt>
+        <dd class="fragment">combine changes from branches, forks, or commits</dd>
+    <dt class="fragment">remote</dt>
+        <dd class="fragment">access repos connected to the local one</dd>
+</dl>
 </div>
 </div>
 </section><section>
-<p>[chart of how git works, conceptually, with terms]</p>
+<div class="mermaid fragment">
+graph LR
+    files[Make changes to project]-->|add|add[Add changes to staging area]
+    add-->|commit|commit[Save changes to repo]
+    commit-->|edit|files
+</div>
+<div class='columns '>
+<div class="mermaid fragment">
+graph
+    branch[Branch project to work]-->|edit|files[Make changes to project]
+    files-->|add|add[Add changes to staging area]
+    add-->|commit|commit[Save changes to repo]
+    commit-->|merge|merge[Combine changes with original branch]
+    merge-->|branch|branch
+</div>
+<div class="mermaid fragment" style="padding-top: 5rem;">
+graph
+    remote[Remote copy]-->|pull|local[Local copy]
+    local-->|push|remote
+    local-->|edit|files[Do work]
+    files-->|commit|local
+</div>
+</div>
 </section><section>
 <h2 id="gui-tools">GUI Tools</h2>
 <ul>
-<li class="fragment">Github Desktop</li><li class="fragment">VSCode</li>
+<li class="fragment">Github Desktop</li><li class="fragment">VSCode</li><li class="fragment">Meld</li><li class="fragment">Sublime Merge</li>
 </ul>
 </section><section>
 <h2 id="authentication-options">Authentication Options</h2>
@@ -204,55 +214,56 @@
 </aside>
 </section><section>
 <h2 id="step-2-initialize-local-repo">Step 2: Initialize Local Repo</h2>
-<div class="typing">
+<div class="typing fragment">
     <div class="typed-strings"><p>git init</p>
 </div>
     <span class="typed"></span>
 </div>
 </section><section>
 <h3 id="2a-tweaking-gits-default-branch-name">2a: Tweaking Git&rsquo;s Default Branch Name</h3>
-<p><img src="/img/master.jpg" alt=""></p>
-<p><img src="/img/main.jpg" alt=""></p>
-</section><section>
-<div class="typing">
+<div class='columns '>
+<p><span class='fragment ' ><img src="/img/master.jpg" alt=""></span></p>
+<p><span class='fragment ' ><img src="/img/main.jpg" alt=""></span></p>
+</div>
+<div class="typing fragment">
     <div class="typed-strings"><p>git config &ndash;global init.defaultBranch main</p>
 </div>
     <span class="typed"></span>
 </div>
 </section><section>
 <h2 id="step-3-making-our-first-commit">Step 3: Making Our First Commit</h2>
-<div class="typing">
-    <div class="typed-strings"><p>^1000 git add .</p>
+<div class="typing fragment">
+    <div class="typed-strings"><p>git add .</p>
 </div>
     <span class="typed"></span>
 </div>
-<div class="typing">
-    <div class="typed-strings"><p>^2500 git commit -m &ldquo;First commit&rdquo;</p>
+<div class="typing fragment">
+    <div class="typed-strings"><p>^250 git commit -m &ldquo;First commit&rdquo;</p>
 </div>
     <span class="typed"></span>
 </div>
 </section><section>
 <h2 id="step-4-connecting-local--remote">Step 4: Connecting Local &amp; Remote</h2>
-<div class="typing">
+<div class="typing fragment">
     <div class="typed-strings"><p>git remote add origin [Github repo url]</p>
 </div>
     <span class="typed"></span>
 </div>
 </section><section>
 <h2 id="step-5-push-to-remote">Step 5: Push To Remote</h2>
-<div class="typing">
+<div class="typing fragment">
     <div class="typed-strings"><p>git push -u origin main</p>
 </div>
     <span class="typed"></span>
 </div>
-<div class="typing">
-    <div class="typed-strings"><p>^2500 git push</p>
+<div class="typing fragment">
+    <div class="typed-strings"><p>git push</p>
 </div>
     <span class="typed"></span>
 </div>
 </section><section>
 <h2 id="step-6-pulling-changes">Step 6: Pulling Changes</h2>
-<div class="typing">
+<div class="typing fragment">
     <div class="typed-strings"><p>git pull</p>
 </div>
     <span class="typed"></span>
@@ -270,19 +281,13 @@
 <div>
 <p>Branches</p>
 <ul>
-<li>Dependent on repo</li>
-<li>Inextricably linked</li>
-<li>Closely related to repo</li>
-<li>Intended to be merged back into main branch (usually)</li>
+<li class="fragment">Dependent on repo</li><li class="fragment">Inextricably linked</li><li class="fragment">Closely related to repo</li><li class="fragment">Intended to be merged back into main branch (usually)</li>
 </ul>
 </div>
 <div>
 <p>Forks</p>
 <ul>
-<li>Based off a parent repo</li>
-<li>Separate/independent</li>
-<li>Not necessarily related after forking</li>
-<li>Merging back to parent optional</li>
+<li class="fragment">Based off a parent repo</li><li class="fragment">Separate/independent</li><li class="fragment">Not necessarily related after forking</li><li class="fragment">Merging back to parent optional</li>
 </ul>
 </div>
 </div>
@@ -291,8 +296,21 @@
 </section><section>
 <h2 id="ownershipsource-of-truth-change">Ownership/Source Of Truth Change</h2>
 <div class='columns '>
-<p>[personal; local -&gt; remote]</p>
-<p>[fork; local -&gt; remote -&gt; upstream]</p>
+<div>
+<p>Personal Repo</p>
+<div class="mermaid">
+graph TD
+    local-->remote
+</div>
+</div>
+<div>
+<p>Forked Repo</p>
+<div class="mermaid">
+graph TD
+    local-->remote
+    remote-->upstream
+</div>
+</div>
 </div>
 </section><section>
 <h2 id="workflow-change">Workflow Change</h2>
@@ -312,12 +330,12 @@
 <h1 id="merging-and-pull-requests">Merging And Pull Requests</h1>
 </section><section>
 <h2 id="merging-branches-in-git">Merging Branches in Git&hellip;</h2>
-<div class="typing">
+<div class="typing fragment">
     <div class="typed-strings"><p>git checkout main</p>
 </div>
     <span class="typed"></span>
 </div>
-<div class="typing">
+<div class="typing fragment">
     <div class="typed-strings"><p>^1500 git merge feature</p>
 </div>
     <span class="typed"></span>
@@ -338,8 +356,7 @@
     <section>
 
 <section data-shortcode-section>
-<h1 id="fin">Fin</h1>
-<p>Questions?</p>
+<h1 id="questions">Questions?</h1>
 </section><section>
 <h2 id="credits">Credits</h2>
 <p>Slides in Hugo and RevealJS</p>
@@ -348,6 +365,7 @@
 <li>RevealJS: <a href="https://revealjs.com/">https://revealjs.com/</a></li>
 <li>Reveal-Hugo: <a href="https://reveal-hugo.dzello.com/">https://reveal-hugo.dzello.com/</a></li>
 <li>Typing Effect: <a href="https://github.com/mattboldt/typed.js/">https://github.com/mattboldt/typed.js/</a></li>
+<li>Flowcharts: <a href="https://mermaid-js.github.io">https://mermaid-js.github.io</a></li>
 </ul>
 
 </section>
@@ -430,7 +448,7 @@
   document.getElementsByTagName('head')[0].appendChild(link);
 </script>
 
-<script type="application/json" id="reveal-hugo-site-params">{"custom_theme":"presentation.scss","custom_theme_compile":true,"height":788,"plugins":["js/typed.js"],"width":1080}</script>
+<script type="application/json" id="reveal-hugo-site-params">{"auto_animate":true,"auto_slide":10000,"custom_theme":"presentation.scss","custom_theme_compile":true,"height":788,"plugins":["js/typed.js","js/mermaid.js"],"width":1080}</script>
 <script type="application/json" id="reveal-hugo-page-params">null</script>
 
 <script src="/reveal-js/js/reveal.js"></script>
@@ -480,6 +498,8 @@
 
 <script type="text/javascript" src="/js/typed.js"></script>
 
+<script type="text/javascript" src="/js/mermaid.js"></script>
+
     
 
 <script>
@@ -491,7 +511,7 @@
         const typed = new Typed(el.querySelector('.typed'), {
             stringsElement: el.querySelector('.typed-strings'),
             loop: false,
-            startDelay: 3500,
+            startDelay: 1500,
             typeSpeed: 40,
             showCursor: false
         });
@@ -503,20 +523,25 @@
         let observer = new MutationObserver((entries) => {
             let target = entries[0].target;
 
-            if(target.classList.contains('present')) {
+            if(target.classList.contains('visible')) {
                 typed.start();
             }
 
-            if(!target.classList.contains('present')) {
+            if(!target.classList.contains('visible')) {
                 typed.reset();
             }
         });
 
-        observer.observe(el.parentNode, observerOpts);
+        observer.observe(el, observerOpts);
     });
 
 
 </script>
+
+
+
+<script>mermaid.initialize({startOnLoad:true});</script>
+
 
     
   </body>

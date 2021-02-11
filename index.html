@@ -11,7 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/reveal-js/css/reset.css">
 <link rel="stylesheet" href="/reveal-js/css/reveal.css">
-  <link rel="stylesheet" href="/_.min.4569569bec84393931edd77a05d6d7fec8d5e1f3b286253f448baeeb74d0b376.css" id="theme"><link rel="stylesheet" href="/highlight-js/default.min.css">
+  <link rel="stylesheet" href="/_.min.2dc9f1f6b05d5f2e275cf0bec88853b0e16aaf81335cc5f36710ada85978643e.css" id="theme"><link rel="stylesheet" href="/highlight-js/default.min.css">
     <script data-goatcounter="https://gordondev.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
@@ -51,7 +51,7 @@
   document.getElementsByTagName('head')[0].appendChild(link);
 </script>
 
-<script type="application/json" id="reveal-hugo-site-params">{"custom_theme":"presentation.scss","custom_theme_compile":true,"height":788,"plugins":["js/typed.js"],"width":1080}</script>
+<script type="application/json" id="reveal-hugo-site-params">{"auto_animate":true,"auto_slide":10000,"custom_theme":"presentation.scss","custom_theme_compile":true,"height":788,"plugins":["js/typed.js","js/mermaid.js"],"width":1080}</script>
 <script type="application/json" id="reveal-hugo-page-params">null</script>
 
 <script src="/reveal-js/js/reveal.js"></script>
@@ -101,43 +101,12 @@
 
 <script type="text/javascript" src="/js/typed.js"></script>
 
+<script type="text/javascript" src="/js/mermaid.js"></script>
+
     
 
-<script>
-    let observerOpts = {
-        attributes: true
-    };
-
-    document.querySelectorAll('.typing').forEach(function(el) {
-        const typed = new Typed(el.querySelector('.typed'), {
-            stringsElement: el.querySelector('.typed-strings'),
-            loop: false,
-            startDelay: 3500,
-            typeSpeed: 40,
-            showCursor: false
-        });
-        typed.stop();
-
-        
-        
-        
-        let observer = new MutationObserver((entries) => {
-            let target = entries[0].target;
-
-            if(target.classList.contains('present')) {
-                typed.start();
-            }
-
-            if(!target.classList.contains('present')) {
-                typed.reset();
-            }
-        });
-
-        observer.observe(el.parentNode, observerOpts);
-    });
 
 
-</script>
 
     
   </body>
