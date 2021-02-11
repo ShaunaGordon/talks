@@ -38,6 +38,35 @@
 {{ end }}
 
 {{ if .Params.mermaid }}
-<script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({startOnLoad:true});</script>
+<script src="https://unpkg.com/mermaid@8.9.0/dist/mermaid.min.js"></script>
+
+<script>
+    mermaid.initialize({startOnLoad:false});
+    mermaid.mermaidAPI.initialize();
+
+    let mermaidObserverOpts = {
+        attributes: true
+    };
+
+    document.querySelectorAll('.mermaid').forEach(function(el) {
+        // TODO: Reveal 4 has events that can help with this
+        // use them instead, after Reveal-Hugo updates
+        // See: https://github.com/dzello/reveal-hugo/pull/91
+        let observer = new MutationObserver((entries) => {
+            let target = entries[0].target;
+
+            if(target.classList.contains('visible')) {
+                let html = el.textContent;
+                let id = 'graph-' + Math.floor(Math.random() * Math.floor(1000));
+
+                mermaid.mermaidAPI.render(id, html, content => {
+                    el.innerHTML = content;
+                });
+                observer.disconnect();
+            }
+        });
+
+        observer.observe(el, mermaidObserverOpts);
+    });
+</script>
 {{ end }}

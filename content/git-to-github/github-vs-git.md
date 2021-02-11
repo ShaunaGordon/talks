@@ -42,11 +42,11 @@ Github is to Git what Jupyter Notebooks is to Python
 
 ---
 
-
-<div class="mermaid">
+<div class="mermaid fragment">
 graph LR
     A[Source Code]-->B[Git]
     B-->C[Github]
 </div>
+
 
 {{% /section %}}
