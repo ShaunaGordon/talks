@@ -13,19 +13,22 @@ outputs = ["Reveal"]
 {{% columns %}}
 {{% column %}}
 Branches
-- Dependent on repo
-- Inextricably linked
-- Closely related to repo
-- Intended to be merged back into main branch (usually)
+{{< fraglist >}}
+Dependent on repo
+Inextricably linked
+Closely related to repo
+Intended to be merged back into main branch (usually)
+{{< /fraglist >}}
 {{% /column %}}
 
 {{% column %}}
 Forks
-- Based off a parent repo
-- Separate/independent
-- Not necessarily related after forking
-- Merging back to parent optional
-
+{{< fraglist >}}
+Based off a parent repo
+Separate/independent
+Not necessarily related after forking
+Merging back to parent optional
+{{< /fraglist >}}
 {{% /column %}}
 {{% /columns %}}
 
@@ -38,9 +41,23 @@ See also: OpenOffice/LibreOffice
 ## Ownership/Source Of Truth Change
 
 {{% columns %}}
-[personal; local -> remote]
+{{% column %}}
+Personal Repo
+<div class="mermaid">
+graph TD
+    local-->remote
+</div>
+{{% /column %}}
 
-[fork; local -> remote -> upstream]
+{{% column %}}
+Forked Repo
+<div class="mermaid">
+graph TD
+    local-->remote
+    remote-->upstream
+</div>
+{{% /column %}}
+
 {{% /columns %}}
 
 ---

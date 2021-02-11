@@ -19,4 +19,6 @@ custom_theme = "presentation.scss"
 custom_theme_compile = true
 width = 1080
 height = 788
-plugins = ['js/typed.js']
+plugins = ['js/typed.js', 'js/mermaid.js']
+auto_slide = 10000
+auto_animate = true

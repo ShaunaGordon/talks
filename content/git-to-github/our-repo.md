@@ -26,11 +26,11 @@ git init
 
 ### 2a: Tweaking Git's Default Branch Name
 
-![](/img/master.jpg)
+{{% columns %}}
+{{% fragment %}}![](/img/master.jpg){{% /fragment %}}
 
-![](/img/main.jpg)
-
----
+{{% fragment %}}![](/img/main.jpg){{% /fragment %}}
+{{% /columns %}}
 
 {{% typed %}}
 git config --global init.defaultBranch main
@@ -41,11 +41,11 @@ git config --global init.defaultBranch main
 ## Step 3: Making Our First Commit
 
 {{% typed %}}
-^1000 git add .
+git add .
 {{% /typed %}}
 
 {{% typed %}}
-^2500 git commit -m "First commit"
+^250 git commit -m "First commit"
 {{% /typed %}}
 
 ---
@@ -65,7 +65,7 @@ git push -u origin main
 {{% /typed %}}
 
 {{% typed %}}
-^2500 git push
+git push
 {{% /typed %}}
 
 ---

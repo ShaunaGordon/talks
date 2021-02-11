@@ -4,9 +4,7 @@ outputs = ["Reveal"]
 +++
 
 {{% section %}}
-# Fin
-
-Questions?
+# Questions?
 
 ---
 
@@ -18,5 +16,6 @@ Slides in Hugo and RevealJS
 - RevealJS: https://revealjs.com/
 - Reveal-Hugo: https://reveal-hugo.dzello.com/
 - Typing Effect: https://github.com/mattboldt/typed.js/
+- Flowcharts: https://mermaid-js.github.io
 
 {{% /section %}}

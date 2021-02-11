@@ -1,5 +1,5 @@
 
-
+{{ if .Params.typed }}
 <script>
     let observerOpts = {
         attributes: true
@@ -9,7 +9,7 @@
         const typed = new Typed(el.querySelector('.typed'), {
             stringsElement: el.querySelector('.typed-strings'),
             loop: false,
-            startDelay: 3500,
+            startDelay: 1500,
             typeSpeed: 40,
             showCursor: false
         });
@@ -21,17 +21,22 @@
         let observer = new MutationObserver((entries) => {
             let target = entries[0].target;
 
-            if(target.classList.contains('present')) {
+            if(target.classList.contains('visible')) {
                 typed.start();
             }
 
-            if(!target.classList.contains('present')) {
+            if(!target.classList.contains('visible')) {
                 typed.reset();
             }
         });
 
-        observer.observe(el.parentNode, observerOpts);
+        observer.observe(el, observerOpts);
     });
 
 
 </script>
+{{ end }}
+
+{{ if .Params.mermaid }}
+<script>mermaid.initialize({startOnLoad:true});</script>
+{{ end }}

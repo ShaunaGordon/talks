@@ -20,6 +20,8 @@ $selectionBackgroundColor: #26351C;
 
 $headingMargin: -$blockMargin 0 $blockMargin*2 0;
 
+$codeFont: 'Anonymous Pro', 'Fira Code', 'Fira Mono', 'Courier New', Courier, monospace;
+
 .reveal {
   a {
     line-height: 1.3em;
@@ -43,6 +45,14 @@ li {
   }
 }
 
+dl {
+  font-size: 2rem;
+
+  dd {
+    font-size: 1.3rem;
+  }
+}
+
 .columns {
   display: flex;
 
@@ -55,6 +65,18 @@ li {
 
 .credit {
   font-size: .75rem;
+}
+
+.typing {
+  text-align: left;
+  background-color: lighten($backgroundColor, 20%);
+  padding: .5rem 1rem;
+
+  .typed {
+    display: inline-block;
+    font-family: $codeFont;
+    position: relative;
+  }
 }
 
 #find-me {

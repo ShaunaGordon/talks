@@ -2,7 +2,7 @@
 
 <ul>
 {{ range $item := $items }}
-    {{- if and (ne $item "") (ne (substr $item 0 1) "<") -}}
+    {{- if ne $item "" -}}
         <li class="fragment">{{ $item | htmlUnescape | safeHTML }}</li>
     {{- end -}}
 {{ end }}
