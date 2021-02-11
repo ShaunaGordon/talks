@@ -91,13 +91,17 @@ Sublime Merge
     <li class="fragment">Password
         <ul>
             <li class="fragment">...uses a password</li>
-            <li class="fragment">Uses the `https://` protocol</li>
+            <li class="fragment">Preferred for cloning read-only repos</li>
+            <li class="fragment">No initial setup</li>
+            <li class="fragment">Dependent on client tools to avoid having to put in password on every action</li>
         </ul>
     </li>
     <li class="fragment">SSH
         <ul>
-            <li class="fragment">Passwordless
-            <li class="fragment">Uses `ssh://` protocol
+            <li class="fragment">Passwordless</li>
+            <li class="fragment">Preferred for writable repos</li>
+            <li class="fragment">A few minutes of initial setup</li>
+            <li class="fragment">Set it and forget it</li>
         </ul>
     </li>
 </ul>
