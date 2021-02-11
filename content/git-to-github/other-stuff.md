@@ -39,7 +39,7 @@ For organizations or even just organizing related projects
 
 ## Github Pages
 
-Static site hosting to promote your projects or host your blog
+Static site hosting to promote your projects or host your blog (or HTML slide decks like this one!)
 
 - https://pages.github.com/
 

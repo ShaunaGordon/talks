@@ -45,7 +45,7 @@ See also: OpenOffice/LibreOffice
 Personal Repo
 <div class="mermaid">
 graph
-    local-->remote
+    local[local]-->remote[remote]
 </div>
 {{% /column %}}
 
@@ -53,8 +53,8 @@ graph
 Forked Repo
 <div class="mermaid">
 graph
-    local-->remote
-    remote-->upstream
+    upstream[upstream]-->remote[remote]
+    remote-->local[local]
 </div>
 {{% /column %}}
 
