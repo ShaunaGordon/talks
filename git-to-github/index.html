@@ -291,15 +291,15 @@ graph
 <p>Personal Repo</p>
 <div class="mermaid">
 graph
-    local-->remote
+    local[local]-->remote[remote]
 </div>
 </div>
 <div>
 <p>Forked Repo</p>
 <div class="mermaid">
 graph
-    local-->remote
-    remote-->upstream
+    upstream[upstream]-->remote[remote]
+    remote-->local[local]
 </div>
 </div>
 </div>
@@ -389,7 +389,7 @@ graph
 </ul>
 </section><section>
 <h2 id="github-pages">Github Pages</h2>
-<p>Static site hosting to promote your projects or host your blog</p>
+<p>Static site hosting to promote your projects or host your blog (or HTML slide decks like this one!)</p>
 <ul>
 <li><a href="https://pages.github.com/">https://pages.github.com/</a></li>
 </ul>
