@@ -76,5 +76,6 @@ Digital Ocean's annual event to encourage open source contributions
 - Setting up SSH keys: https://www.freecodecamp.org/news/git-ssh-how-to/
 - Git cheatsheet: https://education.github.com/git-cheat-sheet-education.pdf
 - Github's git cheatsheet collection (multilingual): https://training.github.com/
+- Git in RStudio: https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN
 
 {{% /section %}}
