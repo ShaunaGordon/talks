@@ -77,5 +77,6 @@ Digital Ocean's annual event to encourage open source contributions
 - Git cheatsheet: https://education.github.com/git-cheat-sheet-education.pdf
 - Github's git cheatsheet collection (multilingual): https://training.github.com/
 - Git in RStudio: https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN
+  - With some Github: https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/VersionControl/
 
 {{% /section %}}
