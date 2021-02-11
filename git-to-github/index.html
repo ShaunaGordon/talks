@@ -103,7 +103,7 @@
 <aside class="notes"><p>Github is to Git what Jupyter Notebooks is to Python</p>
 </aside>
 </section><section>
-<div class="mermaid">
+<div class="mermaid fragment">
 graph LR
     A[Source Code]-->B[Git]
     B-->C[Github]
@@ -289,14 +289,14 @@ graph
 <div class='columns '>
 <div>
 <p>Personal Repo</p>
-<div class="mermaid">
+<div class="mermaid fragment">
 graph
     local[local]-->remote[remote]
 </div>
 </div>
 <div>
 <p>Forked Repo</p>
-<div class="mermaid">
+<div class="mermaid fragment">
 graph
     upstream[upstream]-->remote[remote]
     remote-->local[local]
@@ -529,8 +529,37 @@ graph
 
 
 
-<script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({startOnLoad:true});</script>
+<script src="https://unpkg.com/mermaid@8.9.0/dist/mermaid.min.js"></script>
+
+<script>
+    mermaid.initialize({startOnLoad:false});
+    mermaid.mermaidAPI.initialize();
+
+    let mermaidObserverOpts = {
+        attributes: true
+    };
+
+    document.querySelectorAll('.mermaid').forEach(function(el) {
+        
+        
+        
+        let observer = new MutationObserver((entries) => {
+            let target = entries[0].target;
+
+            if(target.classList.contains('visible')) {
+                let html = el.textContent;
+                let id = 'graph-' + Math.floor(Math.random() * Math.floor(1000));
+
+                mermaid.mermaidAPI.render(id, html, content => {
+                    el.innerHTML = content;
+                });
+                observer.disconnect();
+            }
+        });
+
+        observer.observe(el, mermaidObserverOpts);
+    });
+</script>
 
 
     
