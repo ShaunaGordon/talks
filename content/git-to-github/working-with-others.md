@@ -44,7 +44,7 @@ See also: OpenOffice/LibreOffice
 {{% column %}}
 Personal Repo
 <div class="mermaid">
-graph TD
+graph
     local-->remote
 </div>
 {{% /column %}}
@@ -52,7 +52,7 @@ graph TD
 {{% column %}}
 Forked Repo
 <div class="mermaid">
-graph TD
+graph
     local-->remote
     remote-->upstream
 </div>
